@@ -114,3 +114,40 @@ const randomID = () => {
 
 // console.log(randomID());
 // Expected: 6fplg4lrgxl (you result may be different)
+
+// 7. What is JavaScript Hoisting?
+
+user = 'Yoog Grg'; // value assignment
+var user; // variable declaration
+var user; // re-declaration of variable
+
+// console.log(user);
+
+// Expected: Yoog Grg
+
+// Explanation:-
+
+// First of all, the variable declaration at line # 2 and line # 3 will be considered as one statement.
+// Now, the concept of hoisting will be applied. Meaning that JavaScript will move the variable declaration to the top. After that, the code will be executed.
+// Also, remember that the value stored in a variable will not be lost even if we redeclare the variable.
+
+
+// 8. Will they return same the output or not?
+
+function user1()
+{
+	return {
+		name: "Juan"
+	};
+}
+
+function user2()
+{
+	return
+	{
+		name: "Juan"
+	};
+}
+
+// console.log(user1()); // {name: "Juan"}
+// console.log(user2());   // undefined

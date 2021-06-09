@@ -73,9 +73,44 @@ const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 const uniqueArray = arr => [...new Set(arr)];
 
 const yourArray = [11, 22, 33, 11, 44];
-console.log(uniqueArray(yourArray));
+// console.log(uniqueArray(yourArray));
 // Expected: [11, 22, 33, 44]
 
 const myFruits = ['apple', 'mango', 'apple', 'cherry'];
-console.log(uniqueArray(myFruits));
+// console.log(uniqueArray(myFruits));
 // Expected: ["apple", "mango", "cherry"]
+
+// Round Decimals to a Certain Number of Decimal Places
+
+const roundDecimalPlaces = (num, place) => Number(num.toFixed(place));
+
+// console.log(roundDecimalPlaces(2.935, 2));
+// console.log(roundDecimalPlaces(12.349345, 4));
+// console.log(roundDecimalPlaces(2.5398, 3));
+// console.log(roundDecimalPlaces(1.005, 2));
+// console.log(roundDecimalPlaces(1.555, 2));
+// console.log(roundDecimalPlaces(0.1234, 2));
+
+// 2.94
+// 12.3493
+// 3
+// 2.54
+// 1
+// 1.55
+// 0.12
+
+// 6. Generate a Random ID
+const randomID = () => {
+  const random = Math.random();
+  console.log(random);
+  const str = random.toString(36); // base 36;
+  console.log(str);
+  const result = str.substring(2);
+  return result;
+};
+
+//Alternative one line code
+// const randomID = Math.random().toString(36).substring(2)
+
+// console.log(randomID());
+// Expected: 6fplg4lrgxl (you result may be different)

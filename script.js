@@ -64,6 +64,18 @@ const printLastWeek = () => {
 // 4. Capitalize first letter of a string
 const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
 
-console.log(capitalize('JavaScript is fun!'));
+// console.log(capitalize('JavaScript is fun!'));
 
 //Expected: JavaScript is fun!
+
+// 5. Remove Duplicates of an Array;
+
+const uniqueArray = arr => [...new Set(arr)];
+
+const yourArray = [11, 22, 33, 11, 44];
+console.log(uniqueArray(yourArray));
+// Expected: [11, 22, 33, 44]
+
+const myFruits = ['apple', 'mango', 'apple', 'cherry'];
+console.log(uniqueArray(myFruits));
+// Expected: ["apple", "mango", "cherry"]

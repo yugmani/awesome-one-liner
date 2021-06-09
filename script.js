@@ -35,19 +35,20 @@ const pastWeek = [...Array(7).keys()].map(
 );
 
 // Alternative: Step by step explanation
-const printLastWeek = ()=>{
-const week = [...Array(7)]; // [undefined, undefined, undefined, undefined, undefined, undefined, undefined]
-const weekKeys = [...Array(7).keys()]; // [0, 1, 2, 3, 4, 5, 6]
-const lastWeek = weekKeys.map(day => new Date(Date.now()));
+const printLastWeek = () => {
+  const week = [...Array(7)]; // [undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+  const weekKeys = [...Array(7).keys()]; // [0, 1, 2, 3, 4, 5, 6]
+  const lastWeek = weekKeys.map(day => new Date(Date.now()));
 
-// [Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time)]
-const lastWeekReal = weekKeys.map(day => new Date(Date.now()- 86400000 * day));
-// 86400000 used here is the number of milliseconds in a day.
-return lastWeekReal;
-}
+  // [Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time), Tue Jun 08 2021 13:09:15 GMT-0700 (Pacific Daylight Time)]
+  const lastWeekReal = weekKeys.map(
+    day => new Date(Date.now() - 86400000 * day)
+  );
+  // 86400000 used here is the number of milliseconds in a day.
+  return lastWeekReal;
+};
 
 // console.log(printLastWeek());
-
 
 // console.table(pastWeek);
 //Expected:
@@ -59,3 +60,10 @@ return lastWeekReal;
 // 4	      Fri Jun 04 2021 12:48:14 GMT-0700 (Pacific Daylight Time)
 // 5	      Thu Jun 03 2021 12:48:14 GMT-0700 (Pacific Daylight Time)
 // 6	      Wed Jun 02 2021 12:48:14 GMT-0700 (Pacific Daylight Time)
+
+// 4. Capitalize first letter of a string
+const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1);
+
+console.log(capitalize('JavaScript is fun!'));
+
+//Expected: JavaScript is fun!
